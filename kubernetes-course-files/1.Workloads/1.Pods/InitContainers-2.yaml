@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: initcontainer
+spec:
+  initContainers:
+  - name: my-init
+    image: busybox
+    command: ["touch","file1"]
+    volumeMounts:
+    - name: myvol
+      mountPath: /initpath
+  containers: 
+  - name: my-nginx
+    image: nginx
+    volumeMounts:
+    - name: myvol
+      mountPath: /initpath
+  volumes:
+  - name: myvol
+    hostPath: 
+        path: /data
+        type: DirectoryOrCreate
