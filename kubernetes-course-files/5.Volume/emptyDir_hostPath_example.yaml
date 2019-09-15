@@ -5,17 +5,17 @@ metadata:
   namespace: default
 spec:
   containers:
-    - name: my-nginx
-      image: nginx
-      volumeMounts:
-      - name: emptydir-vol
-        mountPath: /nginxdata
-    - name: my-memcach
-      image: memcached
-      volumeMounts: 
+  - name: my-nginx
+    image: nginx
+    volumeMounts:
+    - name: emptydir-vol
+      mountPath: /nginxdata
+  - name: my-memcach
+    image: memcached
+    volumeMounts: 
     - name: hostpath-vol
       mountPath: /memchacheddata
- volumes:
+  volumes:
     - name: emptydir-vol
       emptyDir: {}
     - name: hostpath-vol
