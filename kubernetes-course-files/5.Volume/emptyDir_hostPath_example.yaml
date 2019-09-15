@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: emptydir-pod
   namespace: default
-  spec:
-    containers:
+spec:
+  containers:
     - name: my-nginx
       image: nginx
       volumeMounts:
@@ -13,9 +13,9 @@ metadata:
     - name: my-memcach
       image: memcached
       volumeMounts: 
-      - name: hostpath-vol
-        mountPath: /memchacheddata
-    volumes:
+    - name: hostpath-vol
+      mountPath: /memchacheddata
+ volumes:
     - name: emptydir-vol
       emptyDir: {}
     - name: hostpath-vol
