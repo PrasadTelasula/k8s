@@ -24,4 +24,3 @@ spec:
         command: ["python"]
         args: ["-c","import time; print ('starting'); time.sleep(30); print('done')"]
       restartPolicy: Never
-  backoffLimit: 2
