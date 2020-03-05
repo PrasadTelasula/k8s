@@ -32,7 +32,7 @@ spec:
     configMap:
       name: mysql-configmap
       items:
-        - key: .my.cnf
+        - key: my.cnf
           path: .my.cnf
 
   containers:
