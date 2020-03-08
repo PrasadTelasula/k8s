@@ -68,7 +68,7 @@ spec:
   selector:
     matchLabels:
       app: api-gateway
-  replicas: 1
+  replicas: 5
   template: # template for the pods
     metadata:
       labels:
