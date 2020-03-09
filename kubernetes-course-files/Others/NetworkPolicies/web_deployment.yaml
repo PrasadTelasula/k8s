@@ -21,7 +21,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: nginx
+      - image: subaniprasad/webtier
         imagePullPolicy: IfNotPresent
         name: web
         resources:
