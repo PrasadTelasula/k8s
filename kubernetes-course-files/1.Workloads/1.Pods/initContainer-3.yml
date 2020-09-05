@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: initcontainer
+  labels:
+     app: nginx
+spec:
+  
+  initContainers:
+  - name: git-sync
+    image: k8s.gcr.io/git-sync:v3.1.5
+    env:
+    - name: GIT_SYNC_REPO
+      value: https://github.com/PrasadTelasula/explore-california.git
+    - name: GIT_SYNC_BRANCH
+      value: master
+    - name: GIT_SYNC_ROOT
+      value: /data
+    - name: GIT_SYNC_DEST
+      value: data
+    - name: GIT_SYNC_ONE_TIME
+      value: "true"
+    securityContext:
+        runAsUser: 0
+    volumeMounts:
+    - name: app-data
+      mountPath: /data
+   
+  containers:
+  - name: nginx-c
+    image: nginx
+    volumeMounts:
+    - name: app-data
+      mountPath: /usr/share/nginx/html
+      subPath: data
+
+      
+  volumes:
+  - name: app-data
+    hostPath: 
+        path: /data
+        type: DirectoryOrCreate
+        
+# kubectl expose pod initcontainer --type NodePort --port 80 --name initcontainersvc --dry-run=client -o yaml
