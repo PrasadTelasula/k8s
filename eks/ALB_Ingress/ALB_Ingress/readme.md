@@ -17,29 +17,12 @@ kubectl describe sa alb-ingress-controller -n kube-system
 # Step 02: 
 ## Create IAM Policy for ALB Ingress Controller
 ````bash
-Go to Services -> IAM -> Policies -> Create Policy
-Click on JSON tab and paste the content from ALBIngressControllerIAMPolicy.json
-Come back to Visual Editor
-Add ELB full access
-Click on Add Additional Permissions
-Service: ELB
-Actions: All ELB actions (elasticloadbalancing:*)
-Resources: All Resources
-Remove ELB which has warnings
-Click on Remove
-Click on Review Policy
-Name: ALBIngressControllerIAMPolicy
-Description: This IAM policy will allow our ALB Ingress Controller pod to make calls to AWS APIs
-Click on Create Policy
+kubectl apply -f ALBIngressControllerIAMPolicy.json
 ````
 
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
 
-
+# Step 03
+## Create an IAM role using eksctl
 #Replaced region, name, cluster and policy arn (Policy arn we took note in step-03)
 ````bash
 eksctl create iamserviceaccount \
@@ -47,7 +30,13 @@ eksctl create iamserviceaccount \
     --name alb-ingress-controller \
     --namespace kube-system \
     --cluster formaceksdemo \
-    --attach-policy-arn arn:aws:iam::304370290957:policy/ALBIngressControllerIAMPolicy \
+    --attach-policy-arn arn:aws:iam::XXXXXXXXXXXX:policy/ALBIngressControllerIAMPolicy \
     --override-existing-serviceaccounts \
     --approve
+ ````
+ 
+ # Verify IAM Account
+ ````bash
+ # Get IAM Service Account
+eksctl  get iamserviceaccount --cluster formaceksdemo
  ````
