@@ -4,6 +4,9 @@
 3. Install 
     - awscli
     - kubectl
+      ````
+      curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl
+      ````
     - eksctl
 
 
