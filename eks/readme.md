@@ -4,7 +4,6 @@
 3. Install 
     - awscli
     - kubectl
-      ````
       <table>
       <thead>
         <tr>
