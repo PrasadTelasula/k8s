@@ -23,8 +23,9 @@ kubectl describe sa alb-ingress-controller -n kube-system
 
 # Step 03
 ## Create an IAM role using eksctl
-#Replaced region, name, cluster and policy arn (Policy arn we took note in step-03)
+
 ````bash
+#Replaced region, name, cluster and policy arn (Policy arn we took note in step-03)
 eksctl create iamserviceaccount \
     --region ap-south-1 \
     --name alb-ingress-controller \
