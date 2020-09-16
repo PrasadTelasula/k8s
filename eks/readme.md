@@ -30,7 +30,6 @@
       
 
     - eksctl
-    
             <table>
               <thead>
                 <tr>
