@@ -46,7 +46,6 @@
               <li>curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp</li>
               <li>sudo mv /tmp/eksctl /usr/local/bin</li>
               <li>eksctl version</li>
-
             </ul>
           </td>
         </tr>
