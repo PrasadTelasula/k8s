@@ -5,12 +5,37 @@
     - awscli
     - kubectl
       ````
-      curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl
-      chmod +x ./kubectl
-      sudo mv ./kubectl /usr/local/bin
-      mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin
-      echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
-      kubectl version --short --client
+      <table>
+      <thead>
+        <tr>
+          <td align="left">
+            :information_source: Installation
+          </td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl</li>
+              <li>chmod +x ./kubectl</li>
+              <li>sudo mv ./kubectl /usr/local/bin</li>
+              <li>mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin</li>
+              <li>echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile</li>
+              <li>kubectl version --short --client</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+      
+      
+      
+      
+      
+      
+      
 
       ````
     - eksctl
