@@ -2,9 +2,9 @@
 1. Prepare bootstrap instance eks-bootstrap
 2. Attach Administrator IAM role.
 3. Install 
-    - [] awscli
-    - [] kubectl
-    - [] eksctl
+    - [*] awscli
+    - [*] kubectl
+    - [*] eksctl
 
 
 # Step-01: Create EKS Cluster using eksctl
