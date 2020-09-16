@@ -4,53 +4,53 @@
 3. Install 
     - awscli
     - kubectl
-      <table>
-      <thead>
-        <tr>
-          <td align="left">
-            :information_source: Installation
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul>
-              <li>curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl</li>
-              <li>chmod +x ./kubectl</li>
-              <li>sudo mv ./kubectl /usr/local/bin</li>
-              <li>mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin</li>
-              <li>echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile</li>
-              <li>kubectl version --short --client</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              <table>
+              <thead>
+                <tr>
+                  <td align="left">
+                    :information_source: Installation
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.9/2020-08-04/bin/linux/amd64/kubectl</li>
+                      <li>chmod +x ./kubectl</li>
+                      <li>sudo mv ./kubectl /usr/local/bin</li>
+                      <li>mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin</li>
+                      <li>echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile</li>
+                      <li>kubectl version --short --client</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
       
 
     - eksctl
     
-    <table>
-      <thead>
-        <tr>
-          <td align="left">
-            :information_source: Installation
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul>
-              <li>curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp</li>
-              <li>sudo mv /tmp/eksctl /usr/local/bin</li>
-              <li>eksctl version</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <table>
+              <thead>
+                <tr>
+                  <td align="left">
+                    :information_source: Installation
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp</li>
+                      <li>sudo mv /tmp/eksctl /usr/local/bin</li>
+                      <li>eksctl version</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
     
        
        
