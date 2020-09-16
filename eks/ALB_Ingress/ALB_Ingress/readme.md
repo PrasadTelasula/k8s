@@ -16,9 +16,9 @@ kubectl describe sa alb-ingress-controller -n kube-system
 
 # Step 02: 
 ## Create IAM Policy for ALB Ingress Controller
-````bash
-kubectl apply -f ALBIngressControllerIAMPolicy.json
-````
+ 
+| :point_up:    | Go to AWS console and create policy with ALBIngressControllerIAMPolicy.json |
+|---------------|:----------------------------------------------------------------------------|
 
 
 # Step 03
