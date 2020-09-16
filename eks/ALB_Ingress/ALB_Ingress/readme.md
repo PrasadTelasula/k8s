@@ -33,6 +33,13 @@ Description: This IAM policy will allow our ALB Ingress Controller pod to make c
 Click on Create Policy
 ````
 
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
+
+
 #Replaced region, name, cluster and policy arn (Policy arn we took note in step-03)
 ````bash
 eksctl create iamserviceaccount \
