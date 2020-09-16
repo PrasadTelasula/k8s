@@ -36,12 +36,17 @@ eksctl create iamserviceaccount \
     --approve
  ````
  
- ##  Verify IAM Account
+| :memo:        | Verify IAM Account       |
+|---------------|:------------------------|
+ 
  ````bash
  # Get IAM Service Account
 eksctl  get iamserviceaccount --cluster formaceksdemo
  ````
-## Verify k8s Service Account
+ 
+| :memo:        | Verify k8s Service Account|
+|---------------|:------------------------|
+
 ````bash
 # Describe Service Account alb-ingress-controller 
 kubectl describe sa alb-ingress-controller -n kube-system
@@ -82,10 +87,14 @@ kubectl edit deployment.apps/alb-ingress-controller -n kube-system
  
  # Step-06: Verify our ALB Ingress Controller is running
  
- ````bash
- # Verify if alb-ingress-controller pod is running
+| :memo:        | Verify if alb-ingress-controller pod is running|
+|---------------|:-----------------------------------------------|
+````bash
 kubectl get pods -n kube-system
+`````
 
-# Verify logs
+| :memo:        | Verify logs|
+|---------------|:-----------|
+````bash
 kubectl logs -f $(kubectl get po -n kube-system | egrep -o 'alb-ingress-controller-[A-Za-z0-9-]+') -n kube-system
  ````
