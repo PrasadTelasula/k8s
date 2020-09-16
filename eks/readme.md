@@ -12,7 +12,6 @@
           </td>
         </tr>
       </thead>
-
       <tbody>
         <tr>
           <td>
@@ -29,20 +28,35 @@
       </tbody>
     </table>
       
-      
-      
-      
-      
-      
-      
 
-      ````
     - eksctl
-    ````
-       curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-       sudo mv /tmp/eksctl /usr/local/bin
-       eksctl version
-     ````
+    
+    <table>
+      <thead>
+        <tr>
+          <td align="left">
+            :information_source: Installation
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp</li>
+              <li>sudo mv /tmp/eksctl /usr/local/bin</li>
+              <li>eksctl version</li>
+
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+       
+       
+       
+     
 
 
 # Step-01: Create EKS Cluster using eksctl
