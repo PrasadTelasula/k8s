@@ -1,6 +1,7 @@
 # Step-01: Create EKS Cluster using eksctl
-## Create Cluster
+
 ````bash
+## Create Cluster
 eksctl create cluster --name=formaceksdemo \
                       --region=ap-south-1 \
                       --zones=ap-south-1a,ap-south-1b \
