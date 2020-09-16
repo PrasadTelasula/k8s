@@ -79,7 +79,7 @@ kubectl edit deployment.apps/alb-ingress-controller -n kube-system
         - --cluster-name=formaceksdemo
  ````
  
- # Step-07: Verify our ALB Ingress Controller is running
+ # Step-06: Verify our ALB Ingress Controller is running
  
  ````bash
  # Verify if alb-ingress-controller pod is running
