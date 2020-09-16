@@ -3,12 +3,6 @@
 2. Attach Administrator IAM role.
 3. Install 
     - awscli
-     <details>
-<summary>
-
-# CLICK ME
-</summary>
-<p>
     - kubectl
     - eksctl
 
