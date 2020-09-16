@@ -3,14 +3,15 @@
 2. Attach Administrator IAM role.
 3. Install 
     - awscli
-    - kubectl
-    - eksctl
- <details>
+     <details>
 <summary>
 
 # CLICK ME
 </summary>
 <p>
+    - kubectl
+    - eksctl
+
 
 #### yes, even hidden code blocks!
 
