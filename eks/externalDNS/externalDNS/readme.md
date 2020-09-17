@@ -69,7 +69,9 @@ arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-R
 ## Deploy ExternalDNS
 ````bash
 # Deploy external DNS
-kubectl apply -f kube-manifests/
+kubectl apply -f rbac.yaml
+
+kubectl apply -f external-dns.yml
 
 # Verify Deployment by checking logs
 kubectl logs -f $(kubectl get po | egrep -o 'external-dns[A-Za-z0-9-]+')
