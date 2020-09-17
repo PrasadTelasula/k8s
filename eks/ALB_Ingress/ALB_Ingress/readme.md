@@ -41,7 +41,7 @@ eksctl create iamserviceaccount \
  
  ````bash
  # Get IAM Service Account
-eksctl  get iamserviceaccount --cluster formaceksdemo
+eksctl  get iamserviceaccount --cluster formaceksdemo --region ap-south-1
  ````
  
 | :memo:        | Verify k8s Service Account|
