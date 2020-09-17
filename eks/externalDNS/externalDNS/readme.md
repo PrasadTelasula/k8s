@@ -62,6 +62,9 @@ arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-R
 | :zap:        update the external-dns.yml file with the IAM role ARN!   |
 |-----------------------------------------|
 
+| :zap:        update the rbac.yaml file with the IAM role ARN!   |
+|-----------------------------------------|
+
 # Step-04
 ## Deploy ExternalDNS
 ````bash
