@@ -47,6 +47,12 @@ kubectl get sa external-dns
 - With above step in CFN, we will be landed in IAM Role created for external-dns.
 - Verify in Permissions tab we have a policy named AllowExternalDNSUpdates
 - Now make a note of that Role ARN, this we need to update in External-DNS k8s manifest
+
+## Copy the role ARN
+````bash
+kubectl describe sa external-dns
+````
+
 ````bash
 arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-Role1-123H9ZMUEG2B5
 ````
