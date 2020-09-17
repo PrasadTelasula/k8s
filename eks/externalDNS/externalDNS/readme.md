@@ -48,7 +48,7 @@ kubectl get sa external-dns
 - Verify in Permissions tab we have a policy named AllowExternalDNSUpdates
 - Now make a note of that Role ARN, this we need to update in External-DNS k8s manifest
 ````bash
-arn:aws:iam::180789647333:role/eksctl-eksdemo1-addon-iamserviceaccount-defa-Role1-1O3H7ZLUED5H4
+arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-Role1-123H9ZMUEG2B5
 ````
 
 # Step-03
