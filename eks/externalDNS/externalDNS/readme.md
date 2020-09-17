@@ -59,8 +59,6 @@ arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-R
 
 # Step-03
 ## Update External DNS Kubernetes manifest
-| :zap:        update the external-dns.yml file with the IAM role ARN!   |
-|-----------------------------------------|
 
 | :zap:        update the rbac.yaml file with the IAM role ARN!   |
 |-----------------------------------------|
@@ -71,7 +69,6 @@ arn:aws:iam::xxxxxxxxxx:role/eksctl-formaceksdemo-addon-iamserviceaccount-defa-R
 # Deploy external DNS
 kubectl apply -f rbac.yaml
 
-kubectl apply -f external-dns.yml
 
 # Verify Deployment by checking logs
 kubectl logs -f $(kubectl get po | egrep -o 'external-dns[A-Za-z0-9-]+')
