@@ -6,7 +6,7 @@ metadata:
   # Otherwise, you may safely omit it.
   annotations:
     # Substitute your account ID and IAM service role name below.
-    eks.amazonaws.com/role-arn: arn:aws:iam::304370290957:role/eksctl-formaceksdemo-addon-iamserviceaccount-Role1-1WNO5AF6ABM68
+    eks.amazonaws.com/role-arn: arn:aws:iam::304370290957:role/eksctl-formaceksdemo-addon-iamserviceaccount-Role1-6HI5B1XTD8GS
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
