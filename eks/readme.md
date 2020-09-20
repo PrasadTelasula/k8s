@@ -118,3 +118,68 @@ eksctl create nodegroup --cluster=formaceksdemo \
                        --appmesh-access \
                        --alb-ingress-access
  ````
+# Add Multiple node groups to the cluster
+## Create Linux Node Group 
+````bash
+eksctl create nodegroup --cluster=formaceksdemo \
+                       --region ap-south-1 \
+                       --name formaceksdemo-ng-t3 \
+                       --node-type t3.medium \
+                       --nodes 2 \
+                       --nodes-min 2 \
+                       --nodes-max 4 \
+                       --node-volume-size 20 \
+                       --ssh-access \
+                       --ssh-public-key PublicLaunchKey \
+                       --managed \
+                       --asg-access \
+                       --external-dns-access \
+                       --full-ecr-access \
+                       --appmesh-access \
+                       --alb-ingress-access 
+````
+
+# Create Winodws Node group
+````bash
+eksctl create nodegroup --cluster formaceksdemo \
+                        --region ap-south-1 \
+                        --name 
+                        --node-type t2.large \
+                        --nodes 1 \
+                        --nodes-min 1 \
+                        --nodes-max 2 \
+                        --node-ami-family WindowsServer2019FullContainer \
+                        --node-volume-size 100 \
+                        --ssh-access \
+                        --ssh-public-key PublicLaunchKey \
+                        --asg-access  \
+                        --external-dns-access  \
+                        --full-ecr-access  \
+                        --appmesh-access  \
+                        --alb-ingress-access
+                        
+# To work with windows Nodes VPC controller utilities should be installed
+eksctl utils install-vpc-controllers --name=formaceksdemo --region ap-south-1 --approve
+````
+
+
+# Select Nodes by labels
+````bash
+# List nodes with labels
+kubectl get nodes --show-labels
+
+# List nodes with instance type c5.large
+kubectl get nodes -l=node.kubernetes.io/instance-type=c5.xlarge
+
+# List nodes with instance type t3.medium
+kubectl get nodes -l=node.kubernetes.io/instance-type=t3.medium
+
+# List nodes with instance type t2.large
+kubectl get nodes -l=node.kubernetes.io/instance-type=t2.large
+
+# List all Linux nodes.
+kubectl get nodes -l=kubernetes.io/os=linux
+
+# List all windows nodes.
+kubectl get nodes -l=kubernetes.io/os=windows
+````
