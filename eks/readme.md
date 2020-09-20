@@ -119,7 +119,8 @@ eksctl create nodegroup --cluster=formaceksdemo \
                        --alb-ingress-access
  ````
 # Add Multiple node groups to the cluster
-## Create Linux Node Group   
+## Create Linux Node Group 
+````bash
 eksctl create nodegroup --cluster=formaceksdemo \
                        --region ap-south-1 \
                        --name formaceksdemo-ng-t3 \
@@ -136,7 +137,8 @@ eksctl create nodegroup --cluster=formaceksdemo \
                        --full-ecr-access \
                        --appmesh-access \
                        --alb-ingress-access 
-                       
+````
+
 # Create Winodws Node group
 ````bash
 eksctl create nodegroup --cluster formaceksdemo \
