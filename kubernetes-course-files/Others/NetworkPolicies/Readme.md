@@ -17,9 +17,9 @@ kubectl run nginx --image=nginx --restart=Never
 ````bash 
 kubectl exec -it nginx -- bash
 ````
-# You will get response
+     # You will get response
      curl appservice.default.svc.cluster.local
-# You will get response
+     # You will get response
     `curl webservice.default.svc.cluster.local` 
     
 ````bash
