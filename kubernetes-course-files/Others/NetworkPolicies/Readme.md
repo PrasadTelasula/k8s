@@ -1,14 +1,14 @@
-kubectl apply -f web_deployment.yml
+`kubectl apply -f web_deployment.yml`
 
-kubectl apply -f app_deployment.yml
+`kubectl apply -f app_deployment.yml`
 
-kubectl get all -o wide
+`kubectl get all -o wide`
 
-kubectl run nginx --image=nginx --restart=Never
+`kubectl run nginx --image=nginx --restart=Never`
 
-kubectl exec -it nginx -- bash
-    curl appservice.default.svc.cluster.local # You will get response
-    curl webservice.default.svc.cluster.local # You will get response
+`kubectl exec -it nginx -- bash`
+    `curl appservice.default.svc.cluster.local` # You will get response
+    `curl webservice.default.svc.cluster.local` # You will get response
     
 kubectl apply app_networkpolicies.yml
 
