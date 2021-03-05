@@ -1,4 +1,6 @@
-```kubectl apply -f web_deployment.yml```
+```bash
+    kubectl apply -f web_deployment.yml
+````
 
 `kubectl apply -f app_deployment.yml`
 
