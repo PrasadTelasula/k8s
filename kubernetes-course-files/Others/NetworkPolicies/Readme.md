@@ -2,7 +2,7 @@
     kubectl apply -f web_deployment.yml
 ````
 
-`kubectl apply -f app_deployment.yml`
+````bashkubectl apply -f app_deployment.yml````
 
 `kubectl get all -o wide`
 
