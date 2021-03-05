@@ -18,7 +18,7 @@ kubectl run nginx --image=nginx --restart=Never
 kubectl exec -it nginx -- bash
 ````
      # You will get response
-     curl appservice.default.svc.cluster.local
+     `curl appservice.default.svc.cluster.local`
     
     # You will get response
     `curl webservice.default.svc.cluster.local` 
@@ -35,14 +35,15 @@ kubectl get networkpolicies
 ````bash
 kubectl exec -it nginx -- bash
     # You will not get response
-    curl appservice.default.svc.cluster.local 
+    `curl appservice.default.svc.cluster.local`
     # You will get response
-    curl webservice.default.svc.cluster.local 
+    `curl webservice.default.svc.cluster.local`
 ````
     
 ````bash
 kubectl exec -it <web_pod> -- sh
-      apk update
-      apk add curl
-      curl appservice.default.svc.cluster.local # you will get response
+      `apk update`
+      `apk add curl`
+      # you will get response
+      `curl appservice.default.svc.cluster.local` 
 ````
