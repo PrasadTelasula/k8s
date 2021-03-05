@@ -2,15 +2,22 @@
     kubectl apply -f web_deployment.yml
 ````
 
-````bashkubectl apply -f app_deployment.yml````
+````bash
+kubectl apply -f app_deployment.yml
+````
+````bash
+kubectl get all -o wide
+````bash
 
-`kubectl get all -o wide`
+````bash
+kubectl run nginx --image=nginx --restart=Never
+````bash
 
-`kubectl run nginx --image=nginx --restart=Never`
-
-`kubectl exec -it nginx -- bash`
+````bash 
+kubectl exec -it nginx -- bash
+````bash
      # You will get response
-    `curl appservice.default.svc.cluster.local` 
+     curl appservice.default.svc.cluster.local
     
     # You will get response
     `curl webservice.default.svc.cluster.local` 
