@@ -1,4 +1,4 @@
-`kubectl apply -f web_deployment.yml`
+```kubectl apply -f web_deployment.yml```
 
 `kubectl apply -f app_deployment.yml`
 
@@ -10,7 +10,7 @@
     `curl appservice.default.svc.cluster.local` # You will get response
     `curl webservice.default.svc.cluster.local` # You will get response
     
-kubectl apply app_networkpolicies.yml
+```kubectl apply app_networkpolicies.yml```
 
 kubectl get networkpolicies
 
